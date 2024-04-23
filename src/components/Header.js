@@ -9,9 +9,12 @@ import {
 
 const socials = [
   { icon: faEnvelope, url: "mailto: jayantparker99@gmail.com" },
-  { icon: faGithub, url: "@fortawesome/free-brands-svg-icons" },
-  { icon: faLinkedin, url: "https://www.linkedin.com/" },
-  { icon: faInstagram, url: "https://instagram.com/" },
+  { icon: faGithub, url: "https://github.com/crash4xe" },
+  {
+    icon: faLinkedin,
+    url: "https://www.linkedin.com/in/jayanta-hansda-183a071ab/",
+  },
+  { icon: faInstagram, url: "https://instagram.com/crash4xe" },
 ];
 
 const Header = () => {
@@ -55,7 +58,6 @@ const Header = () => {
                 ></FontAwesomeIcon>
               </a>
               <a href={socials[3].url}>
-                {" "}
                 <FontAwesomeIcon
                   icon={socials[3].icon}
                   size="2x"
@@ -65,7 +67,7 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#">Projects</a>
+              <a href="#projects-section">Projects</a>
               <a href="#">Contact Me</a>
             </HStack>
           </nav>
