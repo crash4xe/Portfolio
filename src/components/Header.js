@@ -4,14 +4,31 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faInstagram,
+  faMedium,
+  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 
 const socials = [
-  { icon: faEnvelope, url: "mailto: jayantparker99@gmail.com" },
-  { icon: faGithub, url: "@fortawesome/free-brands-svg-icons" },
-  { icon: faLinkedin, url: "https://www.linkedin.com/" },
-  { icon: faInstagram, url: "https://instagram.com/" },
+  {
+    icon: faEnvelope,
+    url: "mailto: hello@example.com",
+  },
+  {
+    icon: faGithub,
+    url: "https://github.com",
+  },
+  {
+    icon: faLinkedin,
+    url: "https://www.linkedin.com",
+  },
+  {
+    icon: faMedium,
+    url: "https://medium.com",
+  },
+  {
+    icon: faStackOverflow,
+    url: "https://stackoverflow.com",
+  },
 ];
 
 const Header = () => {
@@ -36,37 +53,20 @@ const Header = () => {
         >
           <nav>
             <HStack spacing={8}>
-              <a href={socials[0].url}>
-                <FontAwesomeIcon
-                  icon={socials[0].icon}
-                  size="2x"
-                ></FontAwesomeIcon>
-              </a>
-              <a href={socials[1].url}>
-                <FontAwesomeIcon
-                  icon={socials[1].icon}
-                  size="2x"
-                ></FontAwesomeIcon>
-              </a>
-              <a href={socials[2].url}>
-                <FontAwesomeIcon
-                  icon={socials[2].icon}
-                  size="2x"
-                ></FontAwesomeIcon>
-              </a>
-              <a href={socials[3].url}>
-                {" "}
-                <FontAwesomeIcon
-                  icon={socials[3].icon}
-                  size="2x"
-                ></FontAwesomeIcon>
-              </a>
+              {socials.map((icon, ind) => (
+                <a href={socials[ind].url}>
+                  <FontAwesomeIcon
+                    icon={socials[ind].icon}
+                    size="2x"
+                  ></FontAwesomeIcon>
+                </a>
+              ))}
             </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#">Projects</a>
-              <a href="#">Contact Me</a>
+              <a href="#projects-section">Projects</a>
+              <a href="#contactme-section">Contact Me</a>
             </HStack>
           </nav>
         </HStack>

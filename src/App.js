@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectSection from "./components/ProjectsSection";
+import ContactMeSection from "./components/ContactMeSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <LandingSection />
         <ProjectSection />
+        <ContactMeSection />
       </main>
     </ChakraProvider>
   );
