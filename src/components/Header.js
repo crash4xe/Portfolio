@@ -53,20 +53,37 @@ const Header = () => {
         >
           <nav>
             <HStack spacing={8}>
-              {socials.map((icon, ind) => (
-                <a href={socials[ind].url}>
-                  <FontAwesomeIcon
-                    icon={socials[ind].icon}
-                    size="2x"
-                  ></FontAwesomeIcon>
-                </a>
-              ))}
+              <a href={socials[0].url}>
+                <FontAwesomeIcon
+                  icon={socials[0].icon}
+                  size="2x"
+                ></FontAwesomeIcon>
+              </a>
+              <a href={socials[1].url}>
+                <FontAwesomeIcon
+                  icon={socials[1].icon}
+                  size="2x"
+                ></FontAwesomeIcon>
+              </a>
+              <a href={socials[2].url}>
+                <FontAwesomeIcon
+                  icon={socials[2].icon}
+                  size="2x"
+                ></FontAwesomeIcon>
+              </a>
+              <a href={socials[3].url}>
+                {" "}
+                <FontAwesomeIcon
+                  icon={socials[3].icon}
+                  size="2x"
+                ></FontAwesomeIcon>
+              </a>
             </HStack>
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects-section">Projects</a>
-              <a href="#contactme-section">Contact Me</a>
+              <a href="#">Projects</a>
+              <a href="#">Contact Me</a>
             </HStack>
           </nav>
         </HStack>
