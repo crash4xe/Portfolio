@@ -4,16 +4,23 @@ import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
+import Footer from "./components/Footer";
+import { AlertProvider } from "./context/AlertContext";
+import Alert from "./components/Alert";
 
 function App() {
   return (
     <ChakraProvider>
-      <main>
-        <Header />
-        <LandingSection />
-        <ProjectSection />
-        <ContactMeSection />
-      </main>
+      <AlertProvider>
+        <main>
+          <Header />
+          <LandingSection />
+          <ProjectSection />
+          <ContactMeSection />
+          <Footer />
+          <Alert />
+        </main>
+      </AlertProvider>
     </ChakraProvider>
   );
 }
