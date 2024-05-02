@@ -4,15 +4,19 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({ title, description, imageSrc }) => {
   return (
-    <VStack bg="white" color="black" borderRadius="15px">
-      <Image src={imageSrc} borderRadius="10px"></Image>
-      <VStack spacing={4} padding="20px" alignItems="flex-start">
-        <Heading fontSize="xl">{title}</Heading>
-        <Text>{description}</Text>
-        <Text as="b">
-          See More{" "}
-          <FontAwesomeIcon icon={faArrowRight} size="1x"></FontAwesomeIcon>
+    <VStack bg="white" color="black" borderRadius="xl" cursor="pointer">
+      <Image src={imageSrc} borderRadius="xl" alt={title}></Image>
+      <VStack spacing={4} p={4} alignItems="flex-start">
+        <Heading as="h3" size="md">
+          {title}
+        </Heading>
+        <Text color="#64748b" fontSize="lg">
+          {description}
         </Text>
+        <HStack spacing={2} alignItems="center">
+          <p>See More</p>
+          <FontAwesomeIcon icon={faArrowRight} size="1x"></FontAwesomeIcon>
+        </HStack>
       </VStack>
     </VStack>
   );

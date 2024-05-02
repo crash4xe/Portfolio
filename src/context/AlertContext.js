@@ -5,7 +5,7 @@ const AlertContext = createContext(undefined);
 export const AlertProvider = ({ children }) => {
   const [state, setState] = useState({
     isOpen: false,
-    type: "",
+    type: "success",
     message: "",
   });
   return (
