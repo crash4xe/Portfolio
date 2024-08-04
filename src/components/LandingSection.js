@@ -1,7 +1,7 @@
 import { Avatar, Heading, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
-const greeting = "Hello, I am Pete!";
+const greeting = "Hello, I am Jayanta!";
 const bio1 = "A frontend developer";
 const bio2 = "specialised in React";
 
@@ -15,7 +15,7 @@ const LandingSection = () => {
     >
       <VStack spacing={16}>
         <VStack spacing={4} alignItems="center">
-          <Avatar src="https://i.pravatar.cc/150?img=7" size="2xl"></Avatar>
+          <Avatar src="public\headshot.jpg" size="2xl"></Avatar>
           <Heading as="h4" size="md" noOfLines={1}>
             {greeting}
           </Heading>

@@ -12,15 +12,15 @@ import { useEffect, useRef } from "react";
 const socials = [
   {
     icon: faEnvelope,
-    url: "mailto: hello@example.com",
+    url: "mailto: jayantparker99@gmail.com",
   },
   {
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/crash4xe",
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/jayanta-hansda-183a071ab/",
   },
   {
     icon: faMedium,
