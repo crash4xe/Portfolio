@@ -5,8 +5,10 @@ import Card from "./Card";
 const projects = [
   {
     title: "Pix",
-    description: "A One-stop shop for photographers to share their photos.",
+    description:
+      "Pix, premier destination for photographers to easily share, showcase their stunning photos. Whether you're an amateur photographer, a professional artist, or somewhere in between, our platform provides an intuitive and powerful space",
     getImageSrc: () => require("../images/photo3.jpg"),
+    url: "https://crash4xe.github.io/Pix/",
   },
   {
     title: "React Space",
@@ -42,7 +44,10 @@ const ProjectSection = () => {
       </Heading>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(2, minmax(0, 1fr))"
+        gridTemplateColumns={{
+          base: "repeat(1, minmax(0, 1fr))",
+          md: "repeat(2, minmax(0, 1fr))",
+        }}
         gridGap={8}
       >
         {projects.map((project) => (
@@ -51,6 +56,7 @@ const ProjectSection = () => {
             title={project.title}
             description={project.description}
             imageSrc={project.getImageSrc()}
+            url={project.url}
           ></Card>
         ))}
       </Box>
