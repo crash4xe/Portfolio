@@ -2,9 +2,9 @@ import { Box, HStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
 import {
+  faBlogger,
   faGithub,
   faLinkedin,
-  faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
@@ -27,9 +27,9 @@ const socials = [
     name: "Linkedin",
   },
   {
-    icon: faMedium,
-    url: "https://medium.com",
-    name: "Medium",
+    icon: faBlogger,
+    url: "https://dsabycrash.blogspot.com/",
+    name: "Blogger",
   },
   {
     icon: faStackOverflow,

@@ -11,10 +11,11 @@ const projects = [
     url: "https://crash4xe.github.io/Pix/",
   },
   {
-    title: "React Space",
+    title: "DSA by crash",
     description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    getImageSrc: () => require("../images/photo1.jpg"),
+      "Welcome to my blog! Join me on my journey as I dive into the world of Data Structures and Algorithms (DSA). Each day, I tackle a new question, documenting my progress and insights along the way.",
+    getImageSrc: () => require("../images/photo1.png"),
+    url: "https://dsabycrash.blogspot.com/",
   },
   {
     title: "React Infinite Scroll",
