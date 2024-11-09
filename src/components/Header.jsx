@@ -5,7 +5,6 @@ import {
   faBlogger,
   faGithub,
   faLinkedin,
-  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import Sidebar from "./Sidebar";
@@ -23,18 +22,13 @@ const socials = [
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com/in/jayanta-hansda-183a071ab/",
+    url: "https://www.linkedin.com/in/jhansda",
     name: "Linkedin",
   },
   {
     icon: faBlogger,
     url: "https://dsabycrash.blogspot.com/",
     name: "Blogger",
-  },
-  {
-    icon: faStackOverflow,
-    url: "https://stackoverflow.com",
-    name: "Stack Overflow",
   },
 ];
 

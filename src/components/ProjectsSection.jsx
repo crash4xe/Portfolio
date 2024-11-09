@@ -17,24 +17,12 @@ const projects = [
     getImageSrc: () => require("../images/photo1.png"),
     url: "https://dsabycrash.blogspot.com/",
   },
-  {
-    title: "React Infinite Scroll",
-    description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../images/photo2.jpg"),
-  },
-  {
-    title: "Event planner",
-    description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../images/photo4.jpg"),
-  },
 ];
 
 const ProjectSection = () => {
   return (
     <FullScreenSection
-      backgroundColor="#14532d"
+      backgroundColor="#18181b"
       isDarkBackground
       p={8}
       alignItems="flex-start"
