@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Kiona';
+  font-family: 'Aquatico';
   src: url('./fonts/Aquatico-Regular.otf');
   font-weight: normal;
   font-weight: normal;
@@ -17,6 +17,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.theme-icon .sun:hover
+{
+  color: #ffcc33;
+  scale: 120%; 
+  cursor: pointer;
+}
+
+.theme-icon .moon:hover
+{
+  color: #64939a ;
+  scale: 130%; 
+  cursor: pointer;
 }
 
 @media screen and (max-width: 48em) {

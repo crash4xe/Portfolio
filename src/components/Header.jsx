@@ -1,13 +1,19 @@
 import { Box, HStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faBars,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faBlogger,
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Sidebar from "./Sidebar";
+import { ThemeContext } from "../App";
 
 const socials = [
   {
@@ -33,6 +39,11 @@ const socials = [
 ];
 
 const Header = () => {
+  const { isDarkBackground, setIsDarkBackground } = useContext(ThemeContext);
+
+  function ToggleBackground(theme) {
+    setIsDarkBackground(theme);
+  }
   const headerRef = useRef(null);
 
   const [sidebar, setSidebar] = useState(false);
@@ -129,6 +140,24 @@ const Header = () => {
                   >
                     Contact Me
                   </a>
+                  <div
+                    onClick={() => ToggleBackground(!isDarkBackground)}
+                    className="theme-icon"
+                  >
+                    {isDarkBackground ? (
+                      <FontAwesomeIcon
+                        icon={faSun}
+                        size="lg"
+                        className="sun"
+                      ></FontAwesomeIcon>
+                    ) : (
+                      <FontAwesomeIcon
+                        icon={faMoon}
+                        size="lg"
+                        className="moon"
+                      ></FontAwesomeIcon>
+                    )}
+                  </div>
                 </HStack>
               </nav>
             </HStack>

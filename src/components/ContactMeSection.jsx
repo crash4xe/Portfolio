@@ -15,9 +15,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/AlertContext";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "../App";
 
 const ContactMeSection = () => {
+  const { isDarkBackground } = useContext(ThemeContext);
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
   const formik = useFormik({
@@ -52,8 +54,8 @@ const ContactMeSection = () => {
 
   return (
     <FullScreenSection
-      isDarkBackground
-      backgroundColor="#18181b"
+      backgroundColor={isDarkBackground ? "#18181b" : "#f5f5f5"}
+      color={isDarkBackground ? "#f5f5f5" : "#18181b"}
       py={16}
       spacing={8}
     >
@@ -101,7 +103,7 @@ const ContactMeSection = () => {
                     Freelance Project Proposal
                   </option>
                   <option value="openSource" style={{ color: "black" }}>
-                    Open source consultancy session
+                    Testimonial
                   </option>
                   <option value="other" style={{ color: "black" }}>
                     Other

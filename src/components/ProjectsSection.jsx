@@ -1,6 +1,8 @@
 import { Box, Heading } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import Card from "./Card";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 
 const projects = [
   {
@@ -20,10 +22,11 @@ const projects = [
 ];
 
 const ProjectSection = () => {
+  const { isDarkBackground } = useContext(ThemeContext);
   return (
     <FullScreenSection
-      backgroundColor="#18181b"
-      isDarkBackground
+      backgroundColor={isDarkBackground ? "#18181b" : "#f5f5f5"}
+      color={isDarkBackground ? "#f5f5f5" : "#18181b"}
       p={8}
       alignItems="flex-start"
       spacing={8}
