@@ -1,6 +1,5 @@
 import { Heading, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import headshot from "../assets/headshot.jpg";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 
@@ -19,7 +18,6 @@ const LandingSection = () => {
     >
       <VStack spacing={8}>
         <VStack spacing={4} alignItems="center">
-          {/* <Avatar name="Jayanta Hansda" src={headshot} size="2xl"></Avatar> */}
           <Heading
             as="h1"
             size={["xl", "3xl"]}

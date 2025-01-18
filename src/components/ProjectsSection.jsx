@@ -32,7 +32,7 @@ const ProjectSection = () => {
       spacing={8}
     >
       <Heading as="h1" id="projects-section">
-        Featured Projects
+        Projects
       </Heading>
       <Box
         display="grid"

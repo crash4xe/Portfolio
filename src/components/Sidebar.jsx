@@ -17,6 +17,7 @@ const Sidebar = (props) => {
       height="100vh"
       borderTopRightRadius={20}
       borderBottomRightRadius={20}
+      borderRight="1px solid #f5f5f5"
     >
       <span align="right">
         <FontAwesomeIcon icon={faXmark} size="xl" onClick={props.hideSidebar} />

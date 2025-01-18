@@ -63,7 +63,12 @@ const ContactMeSection = () => {
         <Heading as="h1" id="contactme-section">
           Contact Me
         </Heading>
-        <Box rounded="md" p={6} w="100%">
+        <Box
+          rounded="md"
+          p={6}
+          w="100%"
+          boxShadow={"0 8px 15px rgba(0, 0, 0, 0.1)"}
+        >
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl
