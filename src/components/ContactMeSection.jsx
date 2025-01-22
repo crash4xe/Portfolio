@@ -67,7 +67,7 @@ const ContactMeSection = () => {
           rounded="md"
           p={6}
           w="100%"
-          boxShadow={"0 8px 15px rgba(0, 0, 0, 0.1)"}
+          boxShadow={isDarkBackground ? "0 8px 15px rgba(245, 245, 245, 0.1)" :"0 8px 15px rgba(0, 0, 0, 0.1)"}
         >
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
