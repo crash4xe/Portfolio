@@ -25,7 +25,7 @@ function Alert() {
           backgroundColor={isSuccess ? "#81C784" : "#FF8A65"}
         >
           <AlertDialogHeader fontSize="lg" fontWeight="bold">
-            {isSuccess ? "All Good" : "Oops!"}
+            {isSuccess ? "Thanks!" : "Oops!"}
           </AlertDialogHeader>
           <AlertDialogBody>{message}</AlertDialogBody>
         </AlertDialogContent>

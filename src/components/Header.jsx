@@ -14,6 +14,7 @@ import {
 import { useContext, useEffect, useRef, useState } from "react";
 import Sidebar from "./Sidebar";
 import { ThemeContext } from "../App";
+import {motion} from 'framer-motion'
 
 const socials = [
   {
@@ -99,6 +100,7 @@ const Header = () => {
           transitionTimingFunction="ease-in-out"
           backgroundColor="#18181b"
           ref={headerRef}
+          zIndex={20}
         >
           <Box color="white" margin="0 auto">
             <HStack
@@ -117,29 +119,32 @@ const Header = () => {
               <nav className="header">
                 <HStack spacing={8}>
                   {socials.map(({ icon, url }) => (
-                    <a href={url} key={url}>
+                    <motion.a href={url} key={url}                         target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{scale: 1.2}}
+                    whileTap={{scale: 0.9}}>
                       <FontAwesomeIcon
                         icon={icon}
                         size="2x"
                         key={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
                       ></FontAwesomeIcon>
-                    </a>
+                    </motion.a>
                   ))}
                 </HStack>
               </nav>
               <nav className="header">
                 <HStack spacing={8}>
-                  <a href="#projects" onClick={handleClick("projects-section")}>
+                  <motion.a href="#projects" onClick={handleClick("projects-section")} whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                     Projects
-                  </a>
-                  <a
+                  </motion.a>
+                  <motion.a
                     href="#contactme"
                     onClick={handleClick("contactme-section")}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
                   >
                     Contact Me
-                  </a>
+                  </motion.a>
                   <div
                     onClick={() => ToggleBackground(!isDarkBackground)}
                     className="theme-icon"

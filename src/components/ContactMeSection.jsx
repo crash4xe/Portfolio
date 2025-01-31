@@ -17,6 +17,7 @@ import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/AlertContext";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../App";
+import Footer from "./Footer";
 
 const ContactMeSection = () => {
   const { isDarkBackground } = useContext(ThemeContext);
@@ -53,9 +54,7 @@ const ContactMeSection = () => {
   }, [response]);
 
   return (
-    <FullScreenSection
-      backgroundColor={isDarkBackground ? "#18181b" : "#f5f5f5"}
-      color={isDarkBackground ? "#f5f5f5" : "#18181b"}
+    <FullScreenSection  
       py={16}
       spacing={8}
     >
@@ -63,7 +62,12 @@ const ContactMeSection = () => {
         <Heading as="h1" id="contactme-section">
           Contact Me
         </Heading>
-        <Box rounded="md" p={6} w="100%">
+        <Box
+          rounded="md"
+          p={6}
+          w="100%"
+          boxShadow={isDarkBackground ? "0 8px 15px rgba(245, 245, 245, 0.1)" :"0 8px 15px rgba(0, 0, 0, 0.1)"}
+        >
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl
