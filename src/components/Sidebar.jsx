@@ -13,7 +13,7 @@ const Sidebar = (props) => {
       zIndex={10}
       w="250px"
       color={isDarkBackground ? "rgba(24, 24, 27, 1)" : "rgba(245, 245, 245, 1)" }
-      bg= {isDarkBackground ? "rgba(245, 245, 245, 0.5)" : "rgba(24, 24, 27, 0.5)"}
+      bg= {isDarkBackground ? "rgba(245, 245, 245, 0.8)" : "rgba(24, 24, 27, 0.5)"}
       align="left"
       py={5}
       px={10}
@@ -26,7 +26,7 @@ const Sidebar = (props) => {
       </span>
       {props.list.map(({ url, name, icon }) => (
         <HStack spacing={4}>
-          <FontAwesomeIcon icon={icon} size="x" />
+          <FontAwesomeIcon icon={icon} size="xl" />
           <a href={url}>{name}</a>
         </HStack>
       ))}

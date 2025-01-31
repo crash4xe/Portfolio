@@ -17,6 +17,7 @@ import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/AlertContext";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../App";
+import Footer from "./Footer";
 
 const ContactMeSection = () => {
   const { isDarkBackground } = useContext(ThemeContext);
@@ -53,9 +54,7 @@ const ContactMeSection = () => {
   }, [response]);
 
   return (
-    <FullScreenSection
-      backgroundColor={isDarkBackground ? "#18181b" : "#f5f5f5"}
-      color={isDarkBackground ? "#f5f5f5" : "#18181b"}
+    <FullScreenSection  
       py={16}
       spacing={8}
     >

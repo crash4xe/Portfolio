@@ -2,13 +2,10 @@ import { Heading, HStack, VStack, Text, Image } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { ThemeContext } from "../App";
-import { useContext } from "react";
 
 const MotionVStack = motion(VStack);
 
 const Card = ({ title, description, imageSrc, url }) => {
-  const { isDarkBackground } = useContext(ThemeContext);
   return (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <MotionVStack

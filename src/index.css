@@ -14,22 +14,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main{
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+.theme-icon .sun,
+.theme-icon .moon {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
 .theme-icon .sun:hover
 {
   color: #ffcc33;
-  scale: 120%; 
+  transform: scale(1.2) rotate(30deg);
   cursor: pointer;
 }
 
 .theme-icon .moon:hover
 {
   color: #64939a ;
-  scale: 130%; 
+  transform: scale(1.2) rotate(-25deg); 
   cursor: pointer;
 }
 
